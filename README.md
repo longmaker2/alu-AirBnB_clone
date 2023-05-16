@@ -10,3 +10,8 @@
 - [unittest module](https://intranet.aluswe.com/rltoken/MKNUT1FRSdUiGIpwMmrtgw)
 - [args/kwargs](https://intranet.aluswe.com/rltoken/mY-8n8I-ohQIjkUOqcK6Rw)
 - [Python test cheatsheet](https://intranet.aluswe.com/rltoken/9PsyQoeiVNhWGcj_1PkZJg)
+
+## Authors
+
+- Jeff Karau Dauda <j.dauda@alustudent.com>
+- Long Maker Long Deng <l.deng@alustudent.com>
