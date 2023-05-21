@@ -1,13 +1,14 @@
-#!/usr/bin/python3
-"""
-This module creates a State class
-"""
+#!/user/bin/python3
+"""state module for the AirBnB clone"""
 
-from models.base_model import BaseModel
+from models import BaseModel
 
 
 class State(BaseModel):
-    """
-    State class
-    """
+    """State class"""
+
+    # class attributes
     name = ""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)

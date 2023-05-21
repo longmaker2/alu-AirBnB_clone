@@ -1,39 +1,33 @@
 #!/usr/bin/python3
-"""
-Test documentation
-"""
-
+"""unittest for User class"""
 import unittest
-from models.state import State
-from models.base_model import BaseModel
+from models import BaseModel
+from models.user import User
 
 
-class TestState(unittest.TestCase):
-    """Test the State class"""
+class TestUser(unittest.TestCase):
+    """Test cases for User class."""
 
-    def test_instance(self):
-        """Test instance"""
-        obj = State()
-        self.assertIsInstance(obj, State)
+    def setUp(self):
+        self.testUser = User()
 
-    def test_is_subclass(self):
-        """Test is subclass"""
-        obj = State()
-        self.assertTrue(issubclass(type(obj), BaseModel))
+    def test_user(self):
+        """Test if User class is subclass of BaseModel."""
+        self.assertTrue(issubclass(self.testUser.__class__, BaseModel))
 
-    def test_name(self):
-        """Test name"""
-        obj = State()
-        self.assertEqual(obj.name, "")
-        obj.name = "Betty"
-        self.assertEqual(obj.name, "Betty")
+    def test_email(self):
+        """Test email class attribute."""
+        self.assertIsInstance(self.testUser.email, str)
 
-    def test_str(self):
-        """Test str"""
-        obj = State()
-        string = "[State] ({}) {}".format(obj.id, obj.__dict__)
-        self.assertEqual(str(obj), string)
+    def test_password(self):
+        self.assertIsInstance(self.testUser.password, str)
+
+    def test_first_name(self):
+        self.assertIsInstance(self.testUser.first_name, str)
+
+    def test_last_name(self):
+        self.assertIsInstance(self.testUser.last_name, str)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()

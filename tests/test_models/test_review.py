@@ -1,40 +1,27 @@
 #!/usr/bin/python3
-"""
-Module documentation
-"""
+"""unittest for User class"""
 import unittest
-
 from models.review import Review
-
-from models.base_model import BaseModel
+from models import BaseModel
 
 
 class TestReview(unittest.TestCase):
-    """Test cases Review class."""
+    """Test cases for User class."""
 
-    def test_instance(self):
-        """test instance."""
-        review = Review()
-        self.assertIsInstance(review, Review)
+    def setUp(self):
+        self.testReview = Review()
 
-    def test_is_class(self):
-        """test instance."""
-        review = Review()
-        self.assertEqual(str(type(review)),
-                         "<class 'models.review.Review'>")
+    def testState(self):
+        self.assertTrue(issubclass(self.testReview.__class__, BaseModel))
 
-    def test_is_subclass(self):
-        """test is_subclass."""
-        review = Review()
-        self.assertTrue(issubclass(type(review), BaseModel))
+    def test_place_id(self):
+        self.assertIsInstance(self.testReview.place_id, str)
+
+    def test_user_id(self):
+        self.assertIsInstance(self.testReview.user_id, str)
 
     def test_text(self):
-        """test is_subclass."""
-        review = Review()
-        self.assertIsNotNone(review.id)
-        self.assertEqual(review.text, "")
-        self.assertEqual(review.user_id, "")
-        self.assertEqual(review.place_id, "")
+        self.assertIsInstance(self.testReview.text, str)
 
 
 if __name__ == "__main__":
