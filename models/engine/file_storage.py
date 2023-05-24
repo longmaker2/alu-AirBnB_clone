@@ -1,42 +1,43 @@
 #!/usr/bin/python3
-"""
-    Define 'FileStorage' class
-"""
+"""This module defines a class to manage file storage for hbnb clone"""
+
+import json
+import os
 from models.base_model import BaseModel
 from models.user import User
 from models.state import State
 from models.city import City
-from models.place import Place
 from models.amenity import Amenity
+from models.place import Place
 from models.review import Review
-import os.path
-import json
 
 
 class FileStorage:
+    """ This is a storage engine for AirBnB clone project
+    Class Methods:
+        all: Returns the object
+        new: updates the dictionary id
+        save: Serializes, or converts Python objects into JSON strings
+        reload: Deserializes, or converts JSON strings into Python objects.
+    Class Attributes:
+        __file_path (str): The name of the file to save objects to.
+        __objects (dict): A dictionary of instantiated objects.
+        class_dict (dict): A dictionary of all the classes.
     """
-        Represent an abstracted storage engine.
-        Purpose: Provide a way to store objects in a JSON file.
-        Attributes:
-            __file_path (str): string to represent the path to the JSON file
-            __objects (dict): dictionary to store instantiated objects
-    """
+    __file_path = 'storage.json'
 
-    __file_path = "file.json"
     __objects = {}
 
     def all(self):
-        """
-            Return '__objects' dictionary
-        """
-        return FileStorage.__objects
+        return self.__objects
 
     def new(self, obj):
+        """Add obj with key <obj class name>.id to dictionary.
+        Args:
+        obj: the object with key <obj class name>.id
         """
-            Add 'obj' to __objects dictionary with key <obj class name>.id
-        """
-        ocname = obj.__class__.__name__
-        FileStorage.__objects["{}.{}".format(ocname, obj.id)] = obj
+        key = obj.__class__.__name__ + '.' + obj.id
+        self.__objects[key] = obj
 
     def save(self):
         """
