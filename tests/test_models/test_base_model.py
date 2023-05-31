@@ -23,7 +23,7 @@ class test_basemodel(unittest.TestCase):
 
     def tearDown(self):
         try:
-            os.remove('file.json')
+            os.remove('storage.json')
         except FileNotFoundError:
             pass
 
@@ -52,7 +52,7 @@ class test_basemodel(unittest.TestCase):
         i = self.value()
         i.save()
         key = self.name + "." + i.id
-        with open('file.json', 'r') as f:
+        with open('storage.json', 'r') as f:
             j = json.load(f)
             self.assertEqual(j[key], i.to_dict())
 
