@@ -2,7 +2,7 @@
 """unittest for User class"""
 import unittest
 from models.amenity import Amenity
-from models import BaseModel
+from models.base_model import BaseModel
 
 
 class TestState(unittest.TestCase):
