@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """user module for the AirBnB clone"""
 
-from models import BaseModel
+from models.base_model import BaseModel
 
 
 class Review(BaseModel):

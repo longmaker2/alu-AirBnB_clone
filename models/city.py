@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """city module for the AirBnB"""
 
-from models import BaseModel
+from models.base_model import BaseModel
 
 
 class City(BaseModel):
