@@ -27,4 +27,4 @@ The CSS files are responsible for styling the HTML elements to replicate the vis
 - [center boxes](https://intranet.aluswe.com/rltoken/CWYMpBgaImw4SPgfibG2eQ)
 
 # Author: Long Maker Long Deng
-Email: L.deng@alustudent.com
+Email: l.deng@alustudent.com
