@@ -1,0 +1,12 @@
+body {
+    color: #484848;
+    background-color: #fff;
+}
+
+a,
+button,
+input[type="submit"] {
+    color: #fff;
+    background-color: #007bff;
+}
+

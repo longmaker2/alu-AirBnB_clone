@@ -1,0 +1,47 @@
+.places {
+    display: flex;
+    justify-content: center;
+    margin: 45px auto;
+    text-align: center;
+}
+  
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+  
+h1 {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    text-align: left;
+}
+  
+article {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ff5a5f;
+    border-radius: 4px;
+    text-align: left;
+}
+  
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+  .price_by_night {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 60px;
+}

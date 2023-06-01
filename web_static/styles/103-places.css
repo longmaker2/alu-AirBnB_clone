@@ -1,0 +1,7 @@
+div.price_by_night {
+    color: #FF5A5F;
+    background-color: #FFFFFF;
+}
+article:focus {
+    outline: 2px solid #FF5A5F;
+}
